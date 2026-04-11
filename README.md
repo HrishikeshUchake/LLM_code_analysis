@@ -57,3 +57,18 @@ You can monitor the output logs for the Multi-Agent tracking via the active SLUR
 ```bash
 tail -f outputs/projectv2_local_llm_<JOB_ID>.out
 ```
+
+Verify the final output:
+```bash
+python3 -c '
+import json
+with open("/lustre/hdd/LAS/jannesar-lab/hrishi21/project_v2/codes/code_0F/data_analysis/output_4_complexity.json") as f:
+    d = json.load(f)
+for block in d[-10:]:
+    source = block.get("source", "")
+    lines = block.get("lines", [])
+    comps = block.get("complexity", [])
+    if comps != ["1"]:  # filter out trivial O(1) lines to see the good stuff
+        print(f"[{source}] Lines: {lines}\n Complexities: {comps}\n")
+'
+```
