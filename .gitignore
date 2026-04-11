@@ -1,0 +1,22 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+
+# Environment Variables
+.env
+
+# Logs and Slurm outputs
+*.err
+*.out
+*.log
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor directories and files
+.vscode/
+.codex/
+.DS_Store
