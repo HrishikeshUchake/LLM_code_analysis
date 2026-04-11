@@ -1,0 +1,79 @@
+[
+    {
+        "source": "main",
+        "input_function": [],
+        "output_return": [],
+        "code": [
+            "line=1 | depth=0 | code=int <CALL1_VAR7_groups> = 2;",
+            "line=2 | depth=0 | code=if (<CALL1_VAR3_rank> == 0)",
+            "line=3 | depth=0 | code=[LOOP] for (int <CALL1_VAR8_i> = 1; <CALL1_VAR8_i> < <CALL1_VAR1_argc> - 1; <CALL1_VAR8_i>++)",
+            "line=4 | depth=1 | code=if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-<CALL1_VAR5_x>\")",
+            "line=5 | depth=1 | code=<CALL1_VAR5_x> = atof(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);",
+            "line=6 | depth=1 | code=if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-<CALL1_VAR6_n>\")",
+            "line=7 | depth=1 | code=<CALL1_VAR6_n> = atoi(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);",
+            "line=8 | depth=1 | code=if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-g\")",
+            "line=9 | depth=1 | code=<CALL1_VAR7_groups> = atoi(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);",
+            "line=10 | depth=0 | code=[LIBRARY_FUNCTION] MPI_Bcast(&<CALL1_VAR6_n>, 1, MPI_INT, 0, MPI_COMM_WORLD);",
+            "line=11 | depth=0 | code=std::vector<double> <CALL1_VAR10_numbers>(<CALL1_VAR6_n>);",
+            "line=12 | depth=0 | code=if (<CALL1_VAR3_rank> == 0)",
+            "line=13 | depth=0 | code=[LOOP] for (int <CALL1_VAR8_i> = 0; <CALL1_VAR8_i> < <CALL1_VAR6_n>; ++<CALL1_VAR8_i>)",
+            "line=14 | depth=1 | code=<CALL1_VAR10_numbers>[<CALL1_VAR8_i>] = <CALL1_VAR8_i> + 1;",
+            "line=15 | depth=0 | code=[LIBRARY_FUNCTION] MPI_Bcast(<CALL1_VAR10_numbers>.data(), <CALL1_VAR6_n>, MPI_DOUBLE, 0, MPI_COMM_WORLD);",
+            "line=16 | depth=0 | code=if (<CALL1_VAR3_rank> == 0) {",
+            "line=17 | depth=0 | code=if (<CALL1_VAR6_n> <= 0) {",
+            "line=18 | depth=0 | code=cerr << \"MPI Error\\<CALL1_VAR6_n>\";",
+            "line=19 | depth=0 | code=MPI_Abort(MPI_COMM_WORLD, 1);",
+            "line=20 | depth=0 | code=cout << \"Input <CALL1_VAR6_n> = \" << <CALL1_VAR6_n> << \"\\<CALL1_VAR6_n>\";",
+            "line=21 | depth=0 | code=int <CALL1_VAR11_T>;"
+        ]
+    },
+    {
+        "source": "main->foo",
+        "input_function": [
+            "<CALL2_VAR1_a> = <CALL1_VAR6_n>",
+            "<CALL2_VAR2_b> = <CALL1_VAR5_x>",
+            "<CALL2_VAR3_c> = <CALL1_VAR7_groups>",
+            "<CALL2_VAR4_p> = <CALL1_VAR4_size>"
+        ],
+        "output_return": [
+            "<CALL2_VAR1_a> = <CALL1_VAR11_T>"
+        ],
+        "code": [
+            "line=27 | depth=0 | code=int foo(int <CALL2_VAR1_a>, double <CALL2_VAR2_b>, int <CALL2_VAR3_c>, int <CALL2_VAR4_p>){",
+            "line=28 | depth=0 | code=<CALL2_VAR1_a> = <CALL2_VAR1_a>/<CALL2_VAR4_p>;",
+            "line=29 | depth=0 | code=[LOOP] for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)",
+            "line=30 | depth=1 | code=<CALL2_VAR3_c> = <CALL2_VAR5_i> + <CALL2_VAR3_c>;}",
+            "line=31 | depth=0 | code=[LOOP] for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)",
+            "line=32 | depth=1 | code=<CALL2_VAR3_c> = <CALL2_VAR5_i> + <CALL2_VAR3_c>;",
+            "line=33 | depth=0 | code=[LOOP] for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)",
+            "line=34 | depth=1 | code=<CALL2_VAR3_c> = <CALL2_VAR5_i>;",
+            "line=35 | depth=0 | code=<CALL2_VAR1_a> = <CALL2_VAR1_a> + <CALL2_VAR3_c>;"
+        ]
+    },
+    {
+        "source": "main->bar",
+        "input_function": [
+            "<CALL3_VAR1_x> = <CALL1_VAR5_x>",
+            "<CALL3_VAR2_T> = <CALL1_VAR11_T>"
+        ],
+        "output_return": [],
+        "code": [
+            "line=40 | depth=0 | code=void bar(double <CALL3_VAR1_x>, int <CALL3_VAR2_T>){",
+            "line=41 | depth=0 | code=[LOOP] for (int <CALL3_VAR3_i> = 0; <CALL3_VAR3_i> < <CALL3_VAR2_T>; ++<CALL3_VAR3_i>)",
+            "line=42 | depth=1 | code=[LOOP] for (int <CALL3_VAR4_j> = 0; <CALL3_VAR4_j> < <CALL3_VAR2_T>; ++<CALL3_VAR4_j>)",
+            "line=43 | depth=2 | code=<CALL3_VAR1_x> = <CALL3_VAR4_j> + 1;",
+            "line=44 | depth=0 | code=[LOOP] for (int <CALL3_VAR3_i> = 0; <CALL3_VAR3_i> < <CALL3_VAR2_T>; ++<CALL3_VAR3_i>)",
+            "line=45 | depth=1 | code=[LOOP] for (int <CALL3_VAR4_j> = 0; <CALL3_VAR4_j> < <CALL3_VAR2_T>; ++<CALL3_VAR4_j>)",
+            "line=46 | depth=2 | code=[LOOP] for (int <CALL3_VAR5_k> = 0; <CALL3_VAR5_k> < <CALL3_VAR2_T>; ++<CALL3_VAR5_k>)",
+            "line=47 | depth=3 | code=<CALL3_VAR1_x> = <CALL3_VAR4_j> + <CALL3_VAR5_k>;"
+        ]
+    },
+    {
+        "source": "main",
+        "input_function": [],
+        "output_return": [],
+        "code": [
+            "line=48 | depth=0 | code=[LIBRARY_FUNCTION] MPI_Finalize();"
+        ]
+    }
+]

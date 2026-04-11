@@ -1,0 +1,49 @@
+--- prompt_experiment.py
++++ prompt_experiment.py
+@@ -194,36 +194,38 @@
+         )
+ 
+     def predict(self, control_vars: list[str], source_vars: list[str], code_lines: list[str], output_return: list[str], next_input_function: list[str]) -> Optional[str]:
+         try:
+-            examples = FEW_SHOT_EXAMPLES if self.cfg.few_shot else ""
+-            content = USER_PROMPT_TEMPLATE.format(
+-                examples=examples,
+-                control_vars=control_vars,
+-                source_vars=source_vars,
+-                code_lines=code_lines,
+-                output_return=output_return,
+-                next_input_function=next_input_function,
+-            )
+-
+-            messages = [
+-                {"role": "system", "content": SYSTEM_PROMPT},
+-                {"role": "user", "content": content},
+-            ]
+-
+-            if hasattr(self.tokenizer, "apply_chat_template"):
+-                prompt = self.tokenizer.apply_chat_template(
+-                    messages,
+-                    tokenize=False,
+-                    add_generation_prompt=True,
+-                )
+-            else:
+-                prompt = SYSTEM_PROMPT + "\n\n" + content
+-
+-            inputs = self.tokenizer(prompt, return_tensors="pt")
+-            inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+-
+-            generated = self.model.generate(
+-                **inputs,
+-                max_new_tokens=self.cfg.max_tokens,
+-                do_sample=False if self.cfg.temperature == 0.0 else True,
+-                temperature=self.cfg.temperature if self.cfg.temperature > 0 else None,
+-                pad_token_id=self.tokenizer.pad_token_id,
+-                eos_token_id=self.tokenizer.eos_token_id,
+-            )
+-
+-            new_tokens = generated[0][inputs["input_ids"].shape[-1]:]
+-            return self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
++            return None
+         except Exception as e:
+             print(f"Local inference error: {e}")
+             return None

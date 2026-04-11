@@ -1,0 +1,25 @@
+{
+    "main": {
+        "variable_list": [
+            "<CALL1_VAR6_n> = n  * p",
+            "<CALL1_VAR4_size> = p",
+            "groups = 2",
+            "c = i + c",
+            "x = j + k",
+            "T = T",
+            "MPI_Finalize = 1"
+        ]
+    },
+    "main->foo": {
+        "variable_list": [
+            "i = 1",
+            "a = a/p"
+        ]
+    },
+    "main->bar": {
+        "variable_list": [
+            "c = i + c",
+            "x = j + 1"
+        ]
+    }
+}

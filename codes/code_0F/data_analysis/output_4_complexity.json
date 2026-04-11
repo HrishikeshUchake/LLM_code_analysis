@@ -1,0 +1,275 @@
+[
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            3,
+            10,
+            13,
+            15
+        ],
+        "complexity": [
+            "n",
+            "n*p",
+            "n*p",
+            "n*p"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            29,
+            31,
+            33
+        ],
+        "complexity": [
+            "n",
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            41,
+            42,
+            44,
+            45,
+            46
+        ],
+        "complexity": [
+            "n",
+            "n",
+            "n",
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [],
+        "complexity": []
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            3,
+            13
+        ],
+        "complexity": [
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            29,
+            31,
+            33
+        ],
+        "complexity": [
+            "n/p",
+            "n/p",
+            "n/p"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            41,
+            42,
+            44,
+            45,
+            46
+        ],
+        "complexity": [
+            "n/p",
+            "n/p",
+            "n/p",
+            "n/p",
+            "n/p"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [],
+        "complexity": []
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            3,
+            13
+        ],
+        "complexity": [
+            "n*p",
+            "n*p"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            29,
+            31,
+            33
+        ],
+        "complexity": [
+            "n",
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            41,
+            42,
+            44,
+            45,
+            46
+        ],
+        "complexity": [
+            "n",
+            "n",
+            "n",
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [],
+        "complexity": []
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            3
+        ],
+        "complexity": [
+            "1",
+            "<CALL1_VAR1_argc> - 1",
+            "<CALL1_VAR8_i>++"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+        ],
+        "complexity": [
+            "CALL2_VAR1_a/CALL2_VAR4_p",
+            "CALL2_VAR5"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            41,
+            42,
+            43
+        ],
+        "complexity": [
+            "CALL3_VAR3_i = 0",
+            "CALL3_VAR3_i < CALL3_VAR2_T",
+            "CALL3_VAR3_i++"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [
+            48
+        ],
+        "complexity": [
+            "MPI_Finalize()"
+        ]
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            3,
+            10,
+            12,
+            16
+        ],
+        "complexity": [
+            "1",
+            "n/p",
+            "n",
+            "1"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            28,
+            30,
+            32,
+            34,
+            35
+        ],
+        "complexity": [
+            "1",
+            "n",
+            "n",
+            "n",
+            "n"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+        ],
+        "complexity": [
+            "n^2",
+            "n^3",
+            "n",
+            "n^2",
+            "n^3",
+            "n^3",
+            "n^3"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [
+            48
+        ],
+        "complexity": [
+            "1"
+        ]
+    }
+]

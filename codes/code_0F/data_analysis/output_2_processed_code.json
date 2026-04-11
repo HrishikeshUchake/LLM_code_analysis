@@ -1,0 +1,474 @@
+[
+  {
+    "segmentation": 1,
+    "source": "main",
+    "depth": 0,
+    "type": "function_declaration",
+    "code": [
+      "int main(int <CALL1_VAR1_argc>, char* <CALL1_VAR2_argv>[]) {"
+    ]
+  },
+  {
+    "segmentation": 2,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int main(int <CALL1_VAR1_argc>, char* <CALL1_VAR2_argv>[]) {"
+    ]
+  },
+  {
+    "segmentation": 3,
+    "source": "main->MPI_Init",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Init(&<CALL1_VAR1_argc>, &<CALL1_VAR2_argv>);"
+    ]
+  },
+  {
+    "segmentation": 4,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int <CALL1_VAR3_rank>, <CALL1_VAR4_size>;"
+    ]
+  },
+  {
+    "segmentation": 5,
+    "source": "main->MPI_Comm_rank",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Comm_rank(MPI_COMM_WORLD, &<CALL1_VAR3_rank>);"
+    ]
+  },
+  {
+    "segmentation": 6,
+    "source": "main->MPI_Comm_size",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Comm_size(MPI_COMM_WORLD, &<CALL1_VAR4_size>);"
+    ]
+  },
+  {
+    "segmentation": 7,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "double <CALL1_VAR5_x> = 1.0;"
+    ]
+  },
+  {
+    "segmentation": 8,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int <CALL1_VAR6_n> = 5;"
+    ]
+  },
+  {
+    "segmentation": 9,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int <CALL1_VAR7_groups> = 2;"
+    ]
+  },
+  {
+    "segmentation": 10,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "if (<CALL1_VAR3_rank> == 0)"
+    ]
+  },
+  {
+    "segmentation": 11,
+    "source": "main",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL1_VAR8_i> = 1; <CALL1_VAR8_i> < <CALL1_VAR1_argc> - 1; <CALL1_VAR8_i>++)"
+    ]
+  },
+  {
+    "segmentation": 12,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-<CALL1_VAR5_x>\")"
+    ]
+  },
+  {
+    "segmentation": 13,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL1_VAR5_x> = atof(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);"
+    ]
+  },
+  {
+    "segmentation": 14,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-<CALL1_VAR6_n>\")"
+    ]
+  },
+  {
+    "segmentation": 15,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL1_VAR6_n> = atoi(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);"
+    ]
+  },
+  {
+    "segmentation": 16,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "if (std::string(<CALL1_VAR2_argv>[<CALL1_VAR8_i>]) == \"-g\")"
+    ]
+  },
+  {
+    "segmentation": 17,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL1_VAR7_groups> = atoi(<CALL1_VAR2_argv>[<CALL1_VAR8_i> + 1]);"
+    ]
+  },
+  {
+    "segmentation": 18,
+    "source": "main->MPI_Bcast",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Bcast(&<CALL1_VAR6_n>, 1, MPI_INT, 0, MPI_COMM_WORLD);"
+    ]
+  },
+  {
+    "segmentation": 19,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "std::vector<double> <CALL1_VAR10_numbers>(<CALL1_VAR6_n>);"
+    ]
+  },
+  {
+    "segmentation": 20,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "if (<CALL1_VAR3_rank> == 0)"
+    ]
+  },
+  {
+    "segmentation": 21,
+    "source": "main",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL1_VAR8_i> = 0; <CALL1_VAR8_i> < <CALL1_VAR6_n>; ++<CALL1_VAR8_i>)"
+    ]
+  },
+  {
+    "segmentation": 22,
+    "source": "main",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL1_VAR10_numbers>[<CALL1_VAR8_i>] = <CALL1_VAR8_i> + 1;"
+    ]
+  },
+  {
+    "segmentation": 23,
+    "source": "main->MPI_Bcast",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Bcast(<CALL1_VAR10_numbers>.data(), <CALL1_VAR6_n>, MPI_DOUBLE, 0, MPI_COMM_WORLD);"
+    ]
+  },
+  {
+    "segmentation": 24,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "if (<CALL1_VAR3_rank> == 0) {"
+    ]
+  },
+  {
+    "segmentation": 25,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "if (<CALL1_VAR6_n> <= 0) {"
+    ]
+  },
+  {
+    "segmentation": 26,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "cerr << \"MPI Error\\<CALL1_VAR6_n>\";"
+    ]
+  },
+  {
+    "segmentation": 27,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "MPI_Abort(MPI_COMM_WORLD, 1);"
+    ]
+  },
+  {
+    "segmentation": 28,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "cout << \"Input <CALL1_VAR6_n> = \" << <CALL1_VAR6_n> << \"\\<CALL1_VAR6_n>\";"
+    ]
+  },
+  {
+    "segmentation": 29,
+    "source": "main",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int <CALL1_VAR11_T>;"
+    ]
+  },
+  {
+    "segmentation": 30,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "input_function",
+    "code": [
+      "<CALL2_VAR1_a> = <CALL1_VAR6_n>",
+      "<CALL2_VAR2_b> = <CALL1_VAR5_x>",
+      "<CALL2_VAR3_c> = <CALL1_VAR7_groups>",
+      "<CALL2_VAR4_p> = <CALL1_VAR4_size>"
+    ]
+  },
+  {
+    "segmentation": 31,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "function_declaration",
+    "code": [
+      "int foo(int <CALL2_VAR1_a>, double <CALL2_VAR2_b>, int <CALL2_VAR3_c>, int <CALL2_VAR4_p>){"
+    ]
+  },
+  {
+    "segmentation": 32,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "int foo(int <CALL2_VAR1_a>, double <CALL2_VAR2_b>, int <CALL2_VAR3_c>, int <CALL2_VAR4_p>){"
+    ]
+  },
+  {
+    "segmentation": 33,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "<CALL2_VAR1_a> = <CALL2_VAR1_a>/<CALL2_VAR4_p>;"
+    ]
+  },
+  {
+    "segmentation": 34,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)"
+    ]
+  },
+  {
+    "segmentation": 35,
+    "source": "main->foo",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL2_VAR3_c> = <CALL2_VAR5_i> + <CALL2_VAR3_c>;}"
+    ]
+  },
+  {
+    "segmentation": 36,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)"
+    ]
+  },
+  {
+    "segmentation": 37,
+    "source": "main->foo",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL2_VAR3_c> = <CALL2_VAR5_i> + <CALL2_VAR3_c>;"
+    ]
+  },
+  {
+    "segmentation": 38,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL2_VAR5_i> = 0; <CALL2_VAR5_i> < <CALL2_VAR1_a>; ++<CALL2_VAR5_i>)"
+    ]
+  },
+  {
+    "segmentation": 39,
+    "source": "main->foo",
+    "depth": 1,
+    "type": "code",
+    "code": [
+      "<CALL2_VAR3_c> = <CALL2_VAR5_i>;"
+    ]
+  },
+  {
+    "segmentation": 40,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "<CALL2_VAR1_a> = <CALL2_VAR1_a> + <CALL2_VAR3_c>;"
+    ]
+  },
+  {
+    "segmentation": 41,
+    "source": "main->foo",
+    "depth": 0,
+    "type": "output_return",
+    "code": [
+      "<CALL2_VAR1_a> = <CALL1_VAR11_T>"
+    ]
+  },
+  {
+    "segmentation": 42,
+    "source": "main->bar",
+    "depth": 0,
+    "type": "input_function",
+    "code": [
+      "<CALL3_VAR1_x> = <CALL1_VAR5_x>",
+      "<CALL3_VAR2_T> = <CALL1_VAR11_T>"
+    ]
+  },
+  {
+    "segmentation": 43,
+    "source": "main->bar",
+    "depth": 0,
+    "type": "function_declaration",
+    "code": [
+      "void bar(double <CALL3_VAR1_x>, int <CALL3_VAR2_T>){"
+    ]
+  },
+  {
+    "segmentation": 44,
+    "source": "main->bar",
+    "depth": 0,
+    "type": "code",
+    "code": [
+      "void bar(double <CALL3_VAR1_x>, int <CALL3_VAR2_T>){"
+    ]
+  },
+  {
+    "segmentation": 45,
+    "source": "main->bar",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL3_VAR3_i> = 0; <CALL3_VAR3_i> < <CALL3_VAR2_T>; ++<CALL3_VAR3_i>)"
+    ]
+  },
+  {
+    "segmentation": 46,
+    "source": "main->bar",
+    "depth": 1,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL3_VAR4_j> = 0; <CALL3_VAR4_j> < <CALL3_VAR2_T>; ++<CALL3_VAR4_j>)"
+    ]
+  },
+  {
+    "segmentation": 47,
+    "source": "main->bar",
+    "depth": 2,
+    "type": "code",
+    "code": [
+      "<CALL3_VAR1_x> = <CALL3_VAR4_j> + 1;"
+    ]
+  },
+  {
+    "segmentation": 48,
+    "source": "main->bar",
+    "depth": 0,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL3_VAR3_i> = 0; <CALL3_VAR3_i> < <CALL3_VAR2_T>; ++<CALL3_VAR3_i>)"
+    ]
+  },
+  {
+    "segmentation": 49,
+    "source": "main->bar",
+    "depth": 1,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL3_VAR4_j> = 0; <CALL3_VAR4_j> < <CALL3_VAR2_T>; ++<CALL3_VAR4_j>)"
+    ]
+  },
+  {
+    "segmentation": 50,
+    "source": "main->bar",
+    "depth": 2,
+    "type": "loop_declaration",
+    "code": [
+      "for (int <CALL3_VAR5_k> = 0; <CALL3_VAR5_k> < <CALL3_VAR2_T>; ++<CALL3_VAR5_k>)"
+    ]
+  },
+  {
+    "segmentation": 51,
+    "source": "main->bar",
+    "depth": 3,
+    "type": "code",
+    "code": [
+      "<CALL3_VAR1_x> = <CALL3_VAR4_j> + <CALL3_VAR5_k>;"
+    ]
+  },
+  {
+    "segmentation": 52,
+    "source": "main->MPI_Finalize",
+    "depth": 0,
+    "type": "library_function",
+    "code": [
+      "MPI_Finalize();"
+    ]
+  }
+]

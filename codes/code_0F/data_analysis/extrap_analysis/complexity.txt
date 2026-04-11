@@ -1,0 +1,9 @@
+constat
+n^(1)
+constat
+constat
+constat
+p^(1) * n^(1)
+n^(1)
+n^(3)
+log2(p)^(1)

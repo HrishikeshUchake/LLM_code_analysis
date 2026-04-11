@@ -1,0 +1,8 @@
+main
+main->MPI_Init
+main->MPI_Comm_rank
+main->MPI_Comm_size
+main->MPI_Bcast
+main->foo
+main->bar
+main->MPI_Finalize

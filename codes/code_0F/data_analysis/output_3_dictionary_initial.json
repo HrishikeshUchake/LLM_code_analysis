@@ -1,0 +1,14 @@
+{
+    "main": {
+        "variable_list": [
+            "<CALL1_VAR6_n> = n  * p",
+            "<CALL1_VAR4_size> = p"
+        ]
+    },
+    "main->foo": {
+        "variable_list": []
+    },
+    "main->bar": {
+        "variable_list": []
+    }
+}

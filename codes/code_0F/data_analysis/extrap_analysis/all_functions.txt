@@ -1,0 +1,8 @@
+[main] [MPI_Init, MPI_Comm_rank, MPI_Comm_size, MPI_Bcast, foo, bar, MPI_Finalize]
+[MPI_Init]
+[MPI_Comm_rank]
+[MPI_Comm_size]
+[MPI_Bcast]
+[foo]
+[bar]
+[MPI_Finalize]

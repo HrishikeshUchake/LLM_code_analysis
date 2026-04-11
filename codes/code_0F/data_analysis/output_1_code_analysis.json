@@ -1,0 +1,592 @@
+{
+  "results": [
+    {
+      "all_variables": [
+        {
+          "line": "39",
+          "variable": "argc"
+        },
+        {
+          "line": "39",
+          "variable": "argv"
+        },
+        {
+          "line": "42",
+          "variable": "rank"
+        },
+        {
+          "line": "42",
+          "variable": "size"
+        },
+        {
+          "line": "46",
+          "variable": "x"
+        },
+        {
+          "line": "47",
+          "variable": "n"
+        },
+        {
+          "line": "48",
+          "variable": "groups"
+        },
+        {
+          "line": "52",
+          "variable": "i"
+        },
+        {
+          "line": "-",
+          "variable": "this"
+        },
+        {
+          "line": "67",
+          "variable": "numbers"
+        },
+        {
+          "line": "84",
+          "variable": "T"
+        }
+      ],
+      "calls": [
+        {
+          "end": {
+            "col": 27,
+            "line": 40
+          },
+          "function": "MPI_Init",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 40
+          },
+          "variable_passed": [
+            "&argc",
+            "&argv"
+          ]
+        },
+        {
+          "end": {
+            "col": 41,
+            "line": 43
+          },
+          "function": "MPI_Comm_rank",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 43
+          },
+          "variable_passed": [
+            "MPI_COMM_WORLD",
+            "&rank"
+          ]
+        },
+        {
+          "end": {
+            "col": 41,
+            "line": 44
+          },
+          "function": "MPI_Comm_size",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 44
+          },
+          "variable_passed": [
+            "MPI_COMM_WORLD",
+            "&size"
+          ]
+        },
+        {
+          "end": {
+            "col": 49,
+            "line": 65
+          },
+          "function": "MPI_Bcast",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 65
+          },
+          "variable_passed": [
+            "&n",
+            "1",
+            "MPI_INT",
+            "0",
+            "MPI_COMM_WORLD"
+          ]
+        },
+        {
+          "end": {
+            "col": 64,
+            "line": 74
+          },
+          "function": "MPI_Bcast",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 74
+          },
+          "variable_passed": [
+            "numbers.data("
+          ]
+        },
+        {
+          "end": {
+            "col": 34,
+            "line": 85
+          },
+          "function": "foo",
+          "solution": [
+            "T"
+          ],
+          "start": {
+            "col": 9,
+            "line": 85
+          },
+          "variable_passed": [
+            "n",
+            "x",
+            "groups",
+            "size"
+          ]
+        },
+        {
+          "end": {
+            "col": 15,
+            "line": 86
+          },
+          "function": "bar",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 86
+          },
+          "variable_passed": [
+            "x",
+            "T"
+          ]
+        },
+        {
+          "end": {
+            "col": 19,
+            "line": 88
+          },
+          "function": "MPI_Finalize",
+          "solution": [],
+          "start": {
+            "col": 5,
+            "line": 88
+          },
+          "variable_passed": []
+        }
+      ],
+      "function_declare": {
+        "end": {
+          "col": 34,
+          "line": 39
+        },
+        "start": {
+          "col": 1,
+          "line": 39
+        }
+      },
+      "function_range": {
+        "end": {
+          "col": 1,
+          "line": 90
+        },
+        "start": {
+          "col": 34,
+          "line": 39
+        }
+      },
+      "input_variables": [
+        {
+          "variable": "argc"
+        },
+        {
+          "variable": "argv"
+        }
+      ],
+      "library_function": "NO",
+      "loops": [
+        {
+          "body_end": {
+            "col": 31,
+            "line": 71
+          },
+          "body_start": {
+            "col": 13,
+            "line": 71
+          },
+          "declare_end": {
+            "col": 35,
+            "line": 70
+          },
+          "declare_start": {
+            "col": 9,
+            "line": 70
+          },
+          "depth": 1
+        },
+        {
+          "body_end": {
+            "col": 9,
+            "line": 62
+          },
+          "body_start": {
+            "col": 9,
+            "line": 53
+          },
+          "declare_end": {
+            "col": 42,
+            "line": 52
+          },
+          "declare_start": {
+            "col": 9,
+            "line": 52
+          },
+          "depth": 1
+        }
+      ],
+      "name": "main",
+      "return": [
+        {
+          "end": {
+            "col": 5,
+            "line": 89
+          },
+          "start": {
+            "col": 5,
+            "line": 89
+          },
+          "value": "retval"
+        }
+      ],
+      "source_dir": "/home/morais/Desktop/P1_4_LLM_ANALYSIS/2_Approach/llvm_performance_v2/codes/code_0F",
+      "source_file": "script/code_experiment.cpp"
+    },
+    {
+      "library_function": "YES",
+      "name": "MPI_Init"
+    },
+    {
+      "library_function": "YES",
+      "name": "MPI_Comm_rank"
+    },
+    {
+      "library_function": "YES",
+      "name": "MPI_Comm_size"
+    },
+    {
+      "library_function": "YES",
+      "name": "MPI_Bcast"
+    },
+    {
+      "all_variables": [
+        {
+          "line": "10",
+          "variable": "a"
+        },
+        {
+          "line": "10",
+          "variable": "b"
+        },
+        {
+          "line": "10",
+          "variable": "c"
+        },
+        {
+          "line": "10",
+          "variable": "p"
+        },
+        {
+          "line": "13",
+          "variable": "i"
+        }
+      ],
+      "calls": [],
+      "function_declare": {
+        "end": {
+          "col": 39,
+          "line": 10
+        },
+        "start": {
+          "col": 1,
+          "line": 10
+        }
+      },
+      "function_range": {
+        "end": {
+          "col": 1,
+          "line": 24
+        },
+        "start": {
+          "col": 39,
+          "line": 10
+        }
+      },
+      "input_variables": [
+        {
+          "variable": "a"
+        },
+        {
+          "variable": "b"
+        },
+        {
+          "variable": "c"
+        },
+        {
+          "variable": "p"
+        }
+      ],
+      "library_function": "NO",
+      "loops": [
+        {
+          "body_end": {
+            "col": 5,
+            "line": 20
+          },
+          "body_start": {
+            "col": 33,
+            "line": 18
+          },
+          "declare_end": {
+            "col": 31,
+            "line": 18
+          },
+          "declare_start": {
+            "col": 5,
+            "line": 18
+          },
+          "depth": 1
+        },
+        {
+          "body_end": {
+            "col": 18,
+            "line": 16
+          },
+          "body_start": {
+            "col": 9,
+            "line": 16
+          },
+          "declare_end": {
+            "col": 31,
+            "line": 15
+          },
+          "declare_start": {
+            "col": 5,
+            "line": 15
+          },
+          "depth": 1
+        },
+        {
+          "body_end": {
+            "col": 43,
+            "line": 13
+          },
+          "body_start": {
+            "col": 33,
+            "line": 13
+          },
+          "declare_end": {
+            "col": 31,
+            "line": 13
+          },
+          "declare_start": {
+            "col": 5,
+            "line": 13
+          },
+          "depth": 1
+        }
+      ],
+      "name": "foo",
+      "return": [
+        {
+          "end": {
+            "col": 5,
+            "line": 23
+          },
+          "start": {
+            "col": 5,
+            "line": 23
+          },
+          "value": "a"
+        }
+      ],
+      "source_dir": "/home/morais/Desktop/P1_4_LLM_ANALYSIS/2_Approach/llvm_performance_v2/codes/code_0F",
+      "source_file": "script/code_experiment.cpp"
+    },
+    {
+      "all_variables": [
+        {
+          "line": "26",
+          "variable": "x"
+        },
+        {
+          "line": "26",
+          "variable": "T"
+        },
+        {
+          "line": "27",
+          "variable": "i"
+        },
+        {
+          "line": "28",
+          "variable": "j"
+        },
+        {
+          "line": "32",
+          "variable": "k"
+        }
+      ],
+      "calls": [],
+      "function_declare": {
+        "end": {
+          "col": 26,
+          "line": 26
+        },
+        "start": {
+          "col": 1,
+          "line": 26
+        }
+      },
+      "function_range": {
+        "end": {
+          "col": 1,
+          "line": 37
+        },
+        "start": {
+          "col": 26,
+          "line": 26
+        }
+      },
+      "input_variables": [
+        {
+          "variable": "x"
+        },
+        {
+          "variable": "T"
+        }
+      ],
+      "library_function": "NO",
+      "loops": [
+        {
+          "body_end": {
+            "col": 5,
+            "line": 36
+          },
+          "body_start": {
+            "col": 33,
+            "line": 30
+          },
+          "declare_end": {
+            "col": 31,
+            "line": 30
+          },
+          "declare_start": {
+            "col": 5,
+            "line": 30
+          },
+          "depth": 1
+        },
+        {
+          "body_end": {
+            "col": 9,
+            "line": 35
+          },
+          "body_start": {
+            "col": 37,
+            "line": 31
+          },
+          "declare_end": {
+            "col": 35,
+            "line": 31
+          },
+          "declare_start": {
+            "col": 9,
+            "line": 31
+          },
+          "depth": 2
+        },
+        {
+          "body_end": {
+            "col": 13,
+            "line": 34
+          },
+          "body_start": {
+            "col": 41,
+            "line": 32
+          },
+          "declare_end": {
+            "col": 39,
+            "line": 32
+          },
+          "declare_start": {
+            "col": 13,
+            "line": 32
+          },
+          "depth": 3
+        },
+        {
+          "body_end": {
+            "col": 22,
+            "line": 29
+          },
+          "body_start": {
+            "col": 9,
+            "line": 28
+          },
+          "declare_end": {
+            "col": 31,
+            "line": 27
+          },
+          "declare_start": {
+            "col": 5,
+            "line": 27
+          },
+          "depth": 1
+        },
+        {
+          "body_end": {
+            "col": 22,
+            "line": 29
+          },
+          "body_start": {
+            "col": 13,
+            "line": 29
+          },
+          "declare_end": {
+            "col": 35,
+            "line": 28
+          },
+          "declare_start": {
+            "col": 9,
+            "line": 28
+          },
+          "depth": 2
+        }
+      ],
+      "name": "bar",
+      "return": [
+        {
+          "end": {
+            "col": 1,
+            "line": 37
+          },
+          "start": {
+            "col": 1,
+            "line": 37
+          },
+          "value": "none"
+        }
+      ],
+      "source_dir": "/home/morais/Desktop/P1_4_LLM_ANALYSIS/2_Approach/llvm_performance_v2/codes/code_0F",
+      "source_file": "script/code_experiment.cpp"
+    },
+    {
+      "library_function": "YES",
+      "name": "MPI_Finalize"
+    }
+  ]
+}
