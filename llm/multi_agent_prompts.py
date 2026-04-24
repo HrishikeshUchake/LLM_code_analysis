@@ -22,6 +22,7 @@ You are an HPC Performance Engineer. Based on the provided C++ code and the cont
 Analyze EACH loop independently. Identify what the variable updates should be for OUT1 (current), OUT2 (previous), and OUT3 (next).
 CRITICAL: Always substitute intermediate variables back to the base `control_vars` (e.g., n, p). Do not leave `<CALL_VAR...>` markers in your mathematical answers.
 CRITICAL: Do NOT drop hardware scaling factors. In HPC, `n/p` is distinct from `n`. If a loop bounds by `n/p`, output exactly `n/p`, do NEVER simplify it to `n`.
+CRITICAL: Network-level synchronization and collective calls (e.g., MPI_Finalize(), MPI_Bcast(), etc.) have hidden empirical overhead. They are NOT O(1). You must output log(p) for such MPI calls instead of 1.
 """
 
 ANALYST_USER_PROMPT = """
@@ -55,7 +56,8 @@ OUT5:
 expressions separated by comma
 
 RULES:
-- Allowed symbols: control_vars only (n, p, etc.). Use the traced dependencies to substitute intermediate variables to their base `control_vars`.
+- Allowed symbols: control_vars only (n, p, etc.) and mathematical functions like log. Use the traced dependencies to substitute intermediate variables to their base `control_vars`.
+- For MPI synchronization calls (e.g. MPI_Finalize), preserve the log(p) complexity as identified by the analyst.
 - Do NOT simplify scaling factors: N/P is NOT N. Output exactly n/p if the analysis says so.
 - NEVER output <CALL_VAR...> markers anywhere. Map them completely.
 - OUT4 and OUT5 MUST ALIGN PERFECTLY! The 1st value in OUT5 corresponds to the 1st line in OUT4. The 2nd value corresponds to the 2nd line, etc.

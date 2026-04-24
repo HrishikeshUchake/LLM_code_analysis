@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:4
 #SBATCH --mem=64G
 #SBATCH --time=04:00:00
 #SBATCH --chdir=/lustre/hdd/LAS/jannesar-lab/hrishi21/project_v2
@@ -19,7 +19,7 @@ cd "$REPO_ROOT"
 
 # Optional module loads if your cluster requires them.
 # module load python/3.10
-# module load cuda/12.1
+module load cuda/12.8.1-hm53cro
 
 # Optional: activate a project virtualenv if you use one.
 source /lustre/hdd/LAS/jannesar-lab/hrishi21/project_v2/.venv/bin/activate

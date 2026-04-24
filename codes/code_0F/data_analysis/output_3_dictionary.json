@@ -3,14 +3,23 @@
         "variable_list": [
             "<CALL1_VAR6_n> = n  * p",
             "<CALL1_VAR4_size> = p",
-            "groups = 2",
-            "mpi_finalize = 1"
+            "<var> = 2",
+            "a = a/p",
+            "x = j + k",
+            "T = n",
+            "mpi_finalize_time = log(p)"
         ]
     },
     "main->foo": {
-        "variable_list": []
+        "variable_list": [
+            "<var> = undefined",
+            "a = a/p"
+        ]
     },
     "main->bar": {
-        "variable_list": []
+        "variable_list": [
+            "i = 0",
+            "x = j + 1"
+        ]
     }
 }

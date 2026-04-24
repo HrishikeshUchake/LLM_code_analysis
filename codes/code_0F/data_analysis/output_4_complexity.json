@@ -291,5 +291,97 @@
         "complexity": [
             "1"
         ]
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            1
+        ],
+        "complexity": [
+            "1"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            29,
+            31,
+            33
+        ],
+        "complexity": [
+            "a",
+            "a",
+            "a"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            43,
+            47
+        ],
+        "complexity": [
+            "n^2",
+            "n^3"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [
+            48
+        ],
+        "complexity": [
+            "log(p)"
+        ]
+    },
+    {
+        "block_id": 0,
+        "source": "main",
+        "lines": [
+            1
+        ],
+        "complexity": [
+            "1"
+        ]
+    },
+    {
+        "block_id": 1,
+        "source": "main->foo",
+        "lines": [
+            29,
+            31,
+            33
+        ],
+        "complexity": [
+            "a",
+            "a",
+            "a"
+        ]
+    },
+    {
+        "block_id": 2,
+        "source": "main->bar",
+        "lines": [
+            43,
+            47
+        ],
+        "complexity": [
+            "n^2",
+            "n^3"
+        ]
+    },
+    {
+        "block_id": 3,
+        "source": "main",
+        "lines": [
+            48
+        ],
+        "complexity": [
+            "log(p)"
+        ]
     }
 ]
