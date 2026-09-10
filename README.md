@@ -1,6 +1,6 @@
 # LLM Code Analysis & Multi-Agent RAG System
 
-This repository provides an automated framework for static code analysis, control flow tracing, and mathematical Big-O complexity prediction of C++ (and MPI) applications. It leverages local Large Language Models (LLMs) like Qwen2.5-Coder through a Retrieval-Augmented Generation (RAG) and multi-agent pipeline executing on an HPC cluster via SLURM.
+This repository provides an automated framework for static code analysis, control flow tracing, and mathematical Big-O complexity prediction of C++ (and MPI) applications. It leverages local Large Language Models (LLMs) like Qwen2.5-Coder through a Retrieval-Augmented Generation (RAG) and multi-agent pipeline executing on a multi-GPU cluster via SLURM.
 
 ## Overview
 
